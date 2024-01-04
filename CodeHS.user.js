@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Automatically inputs code in CodeHS editor from a predefined solution.
 // @author       Tap
-// @match        *://*codehs.com/*
+// @match        *://codehs.com/*
 // @grant        none
 // ==/UserScript==
 
@@ -22,6 +22,6 @@
 
     // Set the code when the page is loaded
     window.addEventListener('load', setCodeHSCode);
+    setInterval(()=>{setCodeHSCode();},3000);
 })();
 
-setInterval(()=>{setCodeHSCode()},5000)
